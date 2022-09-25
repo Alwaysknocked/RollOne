@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         InputClass userInput = new InputClass();
-        int rolledDie = 0;
+        int rolledDie ;
         System.out.println("""
                 -----------------------------Welcome to ROLL ONE dice game-----------------------------
                 ---------------------------------PRESS R TO START A GAME-------------------------------
@@ -41,8 +41,11 @@ public class Main {
             }
             if (players[0].score == players[1].score)         //In case there is a draw between top 2 players.
             {
-                System.out.println("\n***********It seems we have a draw!***********\n" +
-                        "Each player gets to throw one die, highest throw WINS THE GAME!\n");
+                System.out.println("""
+
+                        ***********It seems we have a draw!***********
+                        Each player gets to throw one die, highest throw WINS THE GAME!
+                        """);
                 System.out.println(players[0].name + " throws: " + (players[0].score = myDie.rollTheDice())+"\n");
                 System.out.println(players[1].name + " throws: " + (players[1].score = myDie.rollTheDice())+"\n");
                 if (players[0].score > players[1].score) {
